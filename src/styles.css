@@ -30,6 +30,7 @@ code {
   max-width: none;
   color: inherit;
   line-height: 1.75;
+  font-size: 1.02rem;
 }
 
 .markdown-sheet {
@@ -39,8 +40,12 @@ code {
 
 .markdown-preview h1,
 .markdown-preview h2,
-.markdown-preview h3 {
+.markdown-preview h3,
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6 {
   line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .markdown-preview h1 {
@@ -61,6 +66,79 @@ code {
   font-weight: 700;
 }
 
+.markdown-preview h4 {
+  margin-block: 1.4rem 0.7rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.markdown-preview h5,
+.markdown-preview h6 {
+  margin-block: 1.1rem 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.markdown-preview p {
+  margin-block: 0.9rem;
+}
+
+.markdown-preview strong {
+  font-weight: 700;
+}
+
+.markdown-preview em {
+  font-style: italic;
+}
+
+.markdown-preview a {
+  color: oklch(var(--p));
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.16em;
+  transition: opacity 120ms ease;
+}
+
+.markdown-preview a:hover {
+  opacity: 0.84;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  margin-block: 0.9rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-preview ul {
+  list-style-type: disc;
+}
+
+.markdown-preview ol {
+  list-style-type: decimal;
+}
+
+.markdown-preview ul ul {
+  list-style-type: circle;
+}
+
+.markdown-preview ul ul ul {
+  list-style-type: square;
+}
+
+.markdown-preview li {
+  display: list-item;
+  margin-block: 0.3rem;
+}
+
+.markdown-preview li > ul,
+.markdown-preview li > ol {
+  margin-block: 0.35rem 0.15rem;
+}
+
+.markdown-preview li::marker {
+  color: oklch(var(--bc) / 0.7);
+}
+
 .markdown-preview table {
   width: 100%;
   border-collapse: collapse;
@@ -71,9 +149,6 @@ code {
   border-radius: 1rem;
 }
 
-.markdown-preview p,
-.markdown-preview ul,
-.markdown-preview ol,
 .markdown-preview blockquote,
 .markdown-preview pre,
 .markdown-preview table {
@@ -93,10 +168,38 @@ code {
   background-color: oklch(var(--b2));
 }
 
+.markdown-preview pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.95em;
+}
+
+.markdown-preview code {
+  border-radius: 0.45rem;
+  background-color: oklch(var(--b2));
+  padding: 0.15rem 0.4rem;
+  font-size: 0.9em;
+}
+
 .markdown-preview blockquote {
   border-left: 3px solid oklch(var(--p));
   padding-left: 1rem;
   color: oklch(var(--bc) / 0.78);
+}
+
+.markdown-preview hr {
+  margin-block: 2rem;
+  border: 0;
+  border-top: 1px solid oklch(var(--b3));
+}
+
+.markdown-preview > :first-child {
+  margin-top: 0;
+}
+
+.markdown-preview > :last-child {
+  margin-bottom: 0;
 }
 
 @media print {
