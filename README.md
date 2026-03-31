@@ -1,6 +1,8 @@
 # Annotations
 
-App de anotações para estudo de engenharia com `Vite + React + TypeScript`, `Supabase Auth`, editor em blocos com markdown e fórmulas LaTeX, organização por disciplinas e deploy na `Vercel`.
+`Annotations` é um workspace pessoal de estudos para organizar disciplinas, páginas e anotações técnicas em markdown, com suporte a fórmulas LaTeX, preview formatado, autenticação com Supabase e acesso em qualquer dispositivo via navegador. A proposta do projeto é funcionar como um caderno digital para rotina acadêmica, concentrando conteúdo de aulas, exercícios, links, datas e observações em uma interface simples e rápida.
+
+O projeto foi estruturado para uso individual e pessoal. Ele não foi pensado como produto comercial, plataforma multiusuário ou SaaS público; o foco é servir como ambiente privado de anotações para um único admin, com deploy simples na Vercel e dados persistidos no Supabase.
 
 ## Stack
 

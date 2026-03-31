@@ -188,7 +188,7 @@ export function WorkspacePage() {
         setStatus('Erro ao salvar')
         setError(nextError instanceof Error ? nextError.message : 'Falha ao salvar página.')
       }
-    }, 900)
+    }, 3000)
 
     return () => window.clearTimeout(timeout)
   }, [selectedPage, titleDraft])
